@@ -1,5 +1,5 @@
 const container = document.querySelector('.container');
-const defaultGrid = makeGrid(32, 32);
+const defaultGrid = makeGrid(16, 16);
 
 
 function makeGrid(rowSize, columnSize) {
