@@ -1,5 +1,7 @@
 const container = document.querySelector('.container');
-const defaultGrid = makeGrid(16, 16);
+let defaultGrid = makeGrid(16, 16);
+const box = document.querySelectorAll('.box');
+const csButton = document.querySelector('.cs-button')
 
 
 function makeGrid(rowSize, columnSize) {
@@ -11,3 +13,24 @@ function makeGrid(rowSize, columnSize) {
         tempDiv.style.height = tempSize + "px";
     }
 }
+
+box.forEach(everyBox => {
+    everyBox.addEventListener('mouseenter', function () {
+        everyBox.classList.add('Hover')
+        everyBox.classList.add('Black')
+    })
+    everyBox.addEventListener('mouseleave', function (){
+        everyBox.classList.remove('Hover')
+    })
+});
+
+csButton.addEventListener('click', () => {
+  tempGridSize =  prompt("Please Pick a New Size")
+ parsedGridSize = parseInt(tempGridSize);
+ while (container.firstChild) {
+    container.removeChild(container.firstChild);
+ }
+makeGrid(parsedGridSize, parsedGridSize);
+})
+
+

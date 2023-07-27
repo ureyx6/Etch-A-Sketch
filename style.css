@@ -10,7 +10,9 @@
     justify-content: center;
     align-items: center;
     max-width: 500px;
+    height: 500px;
     max-height: 500px;
+    width: 500px;
     border: 1px solid black;
     margin: 0 auto;
 }
@@ -27,3 +29,12 @@
     font-size: 48px;
     font-family: Roboto, sans-serif
 }
+.Hover {
+    transform: scale(1.2);
+}
+
+.Black {
+    background-color: black;
+    border-color: black;
+}
+
