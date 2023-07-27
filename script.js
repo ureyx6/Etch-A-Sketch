@@ -19,18 +19,26 @@ box.forEach(everyBox => {
         everyBox.classList.add('Hover')
         everyBox.classList.add('Black')
     })
-    everyBox.addEventListener('mouseleave', function (){
+    everyBox.addEventListener('mouseleave', function () {
         everyBox.classList.remove('Hover')
     })
 });
 
 csButton.addEventListener('click', () => {
-  tempGridSize =  prompt("Please Pick a New Size")
- parsedGridSize = parseInt(tempGridSize);
- while (container.firstChild) {
-    container.removeChild(container.firstChild);
- }
-makeGrid(parsedGridSize, parsedGridSize);
+    tempGridSize = prompt("Please Pick a New Size")
+    parsedGridSize = parseInt(tempGridSize);
+    while (container.firstChild) {
+        container.removeChild(container.firstChild);
+    }
+    makeGrid(parsedGridSize, parsedGridSize)
+    boxTwo = document.querySelectorAll('.box').forEach(everyBox => {
+        everyBox.addEventListener('mouseenter', function () {
+            everyBox.classList.add('Hover')
+            everyBox.classList.add('Black')
+        })
+        everyBox.addEventListener('mouseleave', function () {
+            everyBox.classList.remove('Hover')
+        })
+    });
+
 })
-
-
